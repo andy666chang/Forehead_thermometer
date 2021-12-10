@@ -1,0 +1,2223 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F4916 `(v ~T0 @X0 0 tf ]
+[v F4918 `(v ~T0 @X0 0 tf ]
+"18 ./I2C.h
+[; ;./I2C.h: 18: void I2C_Start( void );
+[v _I2C_Start `(v ~T0 @X0 0 ef ]
+"20
+[; ;./I2C.h: 20: void I2C_Write( uint8_t data );
+[v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
+"22
+[; ;./I2C.h: 22: void I2C_Stop ( void );
+[v _I2C_Stop `(v ~T0 @X0 0 ef ]
+"29 ./SSD1306.h
+[; ;./SSD1306.h: 29: void OLED_write(uint8_t num);
+[v _OLED_write `(v ~T0 @X0 0 ef1`uc ]
+"73 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\stdlib.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c99\stdlib.h: 73: int abs (int);
+[v _abs `(i ~T0 @X0 0 ef1`i ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"386
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 386: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 436: __asm("PIR0 equ 010h");
+[; <" PIR0 equ 010h ;# ">
+"469
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 469: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"531
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 531: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"564
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 564: __asm("PIR3 equ 013h");
+[; <" PIR3 equ 013h ;# ">
+"603
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 603: __asm("PIR4 equ 014h");
+[; <" PIR4 equ 014h ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 636: __asm("TMR0L equ 015h");
+[; <" TMR0L equ 015h ;# ">
+"641
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 641: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"774
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 774: __asm("TMR0H equ 016h");
+[; <" TMR0H equ 016h ;# ">
+"779
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 779: __asm("PR0 equ 016h");
+[; <" PR0 equ 016h ;# ">
+"1028
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1028: __asm("T0CON0 equ 017h");
+[; <" T0CON0 equ 017h ;# ">
+"1093
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1093: __asm("T0CON1 equ 018h");
+[; <" T0CON1 equ 018h ;# ">
+"1170
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1170: __asm("TMR1 equ 019h");
+[; <" TMR1 equ 019h ;# ">
+"1177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1177: __asm("TMR1L equ 019h");
+[; <" TMR1L equ 019h ;# ">
+"1197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1197: __asm("TMR1H equ 01Ah");
+[; <" TMR1H equ 01Ah ;# ">
+"1217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1217: __asm("T1CON equ 01Bh");
+[; <" T1CON equ 01Bh ;# ">
+"1289
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1289: __asm("T1GCON equ 01Ch");
+[; <" T1GCON equ 01Ch ;# ">
+"1359
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1359: __asm("TMR2 equ 01Dh");
+[; <" TMR2 equ 01Dh ;# ">
+"1379
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1379: __asm("PR2 equ 01Eh");
+[; <" PR2 equ 01Eh ;# ">
+"1399
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1399: __asm("T2CON equ 01Fh");
+[; <" T2CON equ 01Fh ;# ">
+"1470
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1470: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1515
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1515: __asm("PIE0 equ 090h");
+[; <" PIE0 equ 090h ;# ">
+"1548
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1548: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1610
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1610: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1643: __asm("PIE3 equ 093h");
+[; <" PIE3 equ 093h ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1682: __asm("PIE4 equ 094h");
+[; <" PIE4 equ 094h ;# ">
+"1715
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1715: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1774
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1774: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1781: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1801
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1801: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1821
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1821: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1907
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1907: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1979
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 1979: __asm("ADACT equ 09Fh");
+[; <" ADACT equ 09Fh ;# ">
+"2025
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2025: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"2070
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2070: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"2122
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2122: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"2198
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2198: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2218: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2245
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2245: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2321
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2321: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2377: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2429
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2429: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2474
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2474: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2495
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2495: __asm("RC1REG equ 0199h");
+[; <" RC1REG equ 0199h ;# ">
+"2500
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2500: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2504
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2504: __asm("RCREG1 equ 0199h");
+[; <" RCREG1 equ 0199h ;# ">
+"2549
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2549: __asm("TX1REG equ 019Ah");
+[; <" TX1REG equ 019Ah ;# ">
+"2554
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2554: __asm("TXREG1 equ 019Ah");
+[; <" TXREG1 equ 019Ah ;# ">
+"2558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2558: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2603
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2603: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"2610
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2610: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"2615
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2615: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2619: __asm("SPBRG1 equ 019Bh");
+[; <" SPBRG1 equ 019Bh ;# ">
+"2623
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2623: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2680
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2680: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"2685
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2685: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2689
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2689: __asm("SPBRGH1 equ 019Ch");
+[; <" SPBRGH1 equ 019Ch ;# ">
+"2734
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2734: __asm("RC1STA equ 019Dh");
+[; <" RC1STA equ 019Dh ;# ">
+"2739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2739: __asm("RCSTA1 equ 019Dh");
+[; <" RCSTA1 equ 019Dh ;# ">
+"2743
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2743: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2914
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2914: __asm("TX1STA equ 019Eh");
+[; <" TX1STA equ 019Eh ;# ">
+"2919
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2919: __asm("TXSTA1 equ 019Eh");
+[; <" TXSTA1 equ 019Eh ;# ">
+"2923
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 2923: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"3094
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3094: __asm("BAUD1CON equ 019Fh");
+[; <" BAUD1CON equ 019Fh ;# ">
+"3099
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3099: __asm("BAUDCON1 equ 019Fh");
+[; <" BAUDCON1 equ 019Fh ;# ">
+"3103
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3103: __asm("BAUDCTL1 equ 019Fh");
+[; <" BAUDCTL1 equ 019Fh ;# ">
+"3107
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3107: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"3111
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3111: __asm("BAUDCTL equ 019Fh");
+[; <" BAUDCTL equ 019Fh ;# ">
+"3340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3340: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"3390
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3390: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"3395
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3395: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3644
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3644: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3649
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3649: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3898
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3898: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3903
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 3903: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"4152
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4152: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"4157
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4157: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"4274
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4274: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"4279
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4279: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"4283
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4283: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"4287
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4287: __asm("SSP1CON equ 0215h");
+[; <" SSP1CON equ 0215h ;# ">
+"4544
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4544: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"4549
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4549: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"4666
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4666: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"4671
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4671: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"4788
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4788: __asm("ODCONA equ 028Ch");
+[; <" ODCONA equ 028Ch ;# ">
+"4833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4833: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"4840
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4840: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"4860
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4860: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"4880
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4880: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"4945
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4945: __asm("CCP1CAP equ 0294h");
+[; <" CCP1CAP equ 0294h ;# ">
+"4985
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4985: __asm("CCPR2 equ 0295h");
+[; <" CCPR2 equ 0295h ;# ">
+"4992
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 4992: __asm("CCPR2L equ 0295h");
+[; <" CCPR2L equ 0295h ;# ">
+"5012
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5012: __asm("CCPR2H equ 0296h");
+[; <" CCPR2H equ 0296h ;# ">
+"5032
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5032: __asm("CCP2CON equ 0297h");
+[; <" CCP2CON equ 0297h ;# ">
+"5097
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5097: __asm("CCP2CAP equ 0298h");
+[; <" CCP2CAP equ 0298h ;# ">
+"5137
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5137: __asm("SLRCONA equ 030Ch");
+[; <" SLRCONA equ 030Ch ;# ">
+"5182
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5182: __asm("INLVLA equ 038Ch");
+[; <" INLVLA equ 038Ch ;# ">
+"5232
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5232: __asm("IOCAP equ 0391h");
+[; <" IOCAP equ 0391h ;# ">
+"5282
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5282: __asm("IOCAN equ 0392h");
+[; <" IOCAN equ 0392h ;# ">
+"5332
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5332: __asm("IOCAF equ 0393h");
+[; <" IOCAF equ 0393h ;# ">
+"5382
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5382: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"5447
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5447: __asm("MDCON equ 039Ch");
+[; <" MDCON equ 039Ch ;# ">
+"5487
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5487: __asm("MDSRC equ 039Dh");
+[; <" MDSRC equ 039Dh ;# ">
+"5533
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5533: __asm("MDCARH equ 039Eh");
+[; <" MDCARH equ 039Eh ;# ">
+"5592
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5592: __asm("MDCARL equ 039Fh");
+[; <" MDCARL equ 039Fh ;# ">
+"5653
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5653: __asm("NCO1ACC equ 0498h");
+[; <" NCO1ACC equ 0498h ;# ">
+"5660
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5660: __asm("NCO1ACCL equ 0498h");
+[; <" NCO1ACCL equ 0498h ;# ">
+"5680
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5680: __asm("NCO1ACCH equ 0499h");
+[; <" NCO1ACCH equ 0499h ;# ">
+"5700
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5700: __asm("NCO1ACCU equ 049Ah");
+[; <" NCO1ACCU equ 049Ah ;# ">
+"5722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5722: __asm("NCO1INC equ 049Bh");
+[; <" NCO1INC equ 049Bh ;# ">
+"5729
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5729: __asm("NCO1INCL equ 049Bh");
+[; <" NCO1INCL equ 049Bh ;# ">
+"5749
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5749: __asm("NCO1INCH equ 049Ch");
+[; <" NCO1INCH equ 049Ch ;# ">
+"5769
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5769: __asm("NCO1INCU equ 049Dh");
+[; <" NCO1INCU equ 049Dh ;# ">
+"5789
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5789: __asm("NCO1CON equ 049Eh");
+[; <" NCO1CON equ 049Eh ;# ">
+"5829
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5829: __asm("NCO1CLK equ 049Fh");
+[; <" NCO1CLK equ 049Fh ;# ">
+"5856
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5856: __asm("PWM5DCL equ 0617h");
+[; <" PWM5DCL equ 0617h ;# ">
+"5892
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5892: __asm("PWM5DCH equ 0618h");
+[; <" PWM5DCH equ 0618h ;# ">
+"5962
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5962: __asm("PWM5CON equ 0619h");
+[; <" PWM5CON equ 0619h ;# ">
+"5967
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 5967: __asm("PWM5CON0 equ 0619h");
+[; <" PWM5CON0 equ 0619h ;# ">
+"6028
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6028: __asm("PWM6DCL equ 061Ah");
+[; <" PWM6DCL equ 061Ah ;# ">
+"6064
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6064: __asm("PWM6DCH equ 061Bh");
+[; <" PWM6DCH equ 061Bh ;# ">
+"6134
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6134: __asm("PWM6CON equ 061Ch");
+[; <" PWM6CON equ 061Ch ;# ">
+"6139
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6139: __asm("PWM6CON0 equ 061Ch");
+[; <" PWM6CON0 equ 061Ch ;# ">
+"6200
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6200: __asm("CWG1CLKCON equ 0691h");
+[; <" CWG1CLKCON equ 0691h ;# ">
+"6228
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6228: __asm("CWG1DAT equ 0692h");
+[; <" CWG1DAT equ 0692h ;# ">
+"6274
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6274: __asm("CWG1DBR equ 0693h");
+[; <" CWG1DBR equ 0693h ;# ">
+"6378
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6378: __asm("CWG1DBF equ 0694h");
+[; <" CWG1DBF equ 0694h ;# ">
+"6482
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6482: __asm("CWG1CON0 equ 0695h");
+[; <" CWG1CON0 equ 0695h ;# ">
+"6583
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6583: __asm("CWG1CON1 equ 0696h");
+[; <" CWG1CON1 equ 0696h ;# ">
+"6661
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6661: __asm("CWG1AS0 equ 0697h");
+[; <" CWG1AS0 equ 0697h ;# ">
+"6781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6781: __asm("CWG1AS1 equ 0698h");
+[; <" CWG1AS1 equ 0698h ;# ">
+"6814
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6814: __asm("CWG1STR equ 0699h");
+[; <" CWG1STR equ 0699h ;# ">
+"6926
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6926: __asm("NVMADR equ 0891h");
+[; <" NVMADR equ 0891h ;# ">
+"6931
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6931: __asm("EEADR equ 0891h");
+[; <" EEADR equ 0891h ;# ">
+"6935
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6935: __asm("PMADR equ 0891h");
+[; <" PMADR equ 0891h ;# ">
+"6942
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6942: __asm("NVMADRL equ 0891h");
+[; <" NVMADRL equ 0891h ;# ">
+"6947
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6947: __asm("EEADRL equ 0891h");
+[; <" EEADRL equ 0891h ;# ">
+"6951
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 6951: __asm("PMADRL equ 0891h");
+[; <" PMADRL equ 0891h ;# ">
+"7344
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7344: __asm("NVMADRH equ 0892h");
+[; <" NVMADRH equ 0892h ;# ">
+"7349
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7349: __asm("EEADRH equ 0892h");
+[; <" EEADRH equ 0892h ;# ">
+"7353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7353: __asm("PMADRH equ 0892h");
+[; <" PMADRH equ 0892h ;# ">
+"7692
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7692: __asm("NVMDAT equ 0893h");
+[; <" NVMDAT equ 0893h ;# ">
+"7697
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7697: __asm("EEDAT equ 0893h");
+[; <" EEDAT equ 0893h ;# ">
+"7701
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7701: __asm("PMDAT equ 0893h");
+[; <" PMDAT equ 0893h ;# ">
+"7708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7708: __asm("NVMDATL equ 0893h");
+[; <" NVMDATL equ 0893h ;# ">
+"7713
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7713: __asm("EEDATL equ 0893h");
+[; <" EEDATL equ 0893h ;# ">
+"7717
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 7717: __asm("PMDATL equ 0893h");
+[; <" PMDATL equ 0893h ;# ">
+"8110
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8110: __asm("NVMDATH equ 0894h");
+[; <" NVMDATH equ 0894h ;# ">
+"8115
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8115: __asm("EEDATH equ 0894h");
+[; <" EEDATH equ 0894h ;# ">
+"8119
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8119: __asm("PMDATH equ 0894h");
+[; <" PMDATH equ 0894h ;# ">
+"8440
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8440: __asm("NVMCON1 equ 0895h");
+[; <" NVMCON1 equ 0895h ;# ">
+"8445
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8445: __asm("EECON1 equ 0895h");
+[; <" EECON1 equ 0895h ;# ">
+"8449
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8449: __asm("PMCON1 equ 0895h");
+[; <" PMCON1 equ 0895h ;# ">
+"8629
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8629: __asm("NVMCON2 equ 0896h");
+[; <" NVMCON2 equ 0896h ;# ">
+"8634
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8634: __asm("EECON2 equ 0896h");
+[; <" EECON2 equ 0896h ;# ">
+"8638
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8638: __asm("PMCON2 equ 0896h");
+[; <" PMCON2 equ 0896h ;# ">
+"8731
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8731: __asm("PCON0 equ 089Bh");
+[; <" PCON0 equ 089Bh ;# ">
+"8788
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8788: __asm("PMD0 equ 0911h");
+[; <" PMD0 equ 0911h ;# ">
+"8833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8833: __asm("PMD1 equ 0912h");
+[; <" PMD1 equ 0912h ;# ">
+"8872
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8872: __asm("PMD2 equ 0913h");
+[; <" PMD2 equ 0913h ;# ">
+"8906
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8906: __asm("PMD3 equ 0914h");
+[; <" PMD3 equ 0914h ;# ">
+"8951
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8951: __asm("PMD4 equ 0915h");
+[; <" PMD4 equ 0915h ;# ">
+"8979
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 8979: __asm("PMD5 equ 0916h");
+[; <" PMD5 equ 0916h ;# ">
+"9011
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9011: __asm("CPUDOZE equ 0918h");
+[; <" CPUDOZE equ 0918h ;# ">
+"9076
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9076: __asm("OSCCON1 equ 0919h");
+[; <" OSCCON1 equ 0919h ;# ">
+"9146
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9146: __asm("OSCCON2 equ 091Ah");
+[; <" OSCCON2 equ 091Ah ;# ">
+"9216
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9216: __asm("OSCCON3 equ 091Bh");
+[; <" OSCCON3 equ 091Bh ;# ">
+"9261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9261: __asm("OSCSTAT1 equ 091Ch");
+[; <" OSCSTAT1 equ 091Ch ;# ">
+"9313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9313: __asm("OSCEN equ 091Dh");
+[; <" OSCEN equ 091Dh ;# ">
+"9359
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9359: __asm("OSCTUNE equ 091Eh");
+[; <" OSCTUNE equ 091Eh ;# ">
+"9417
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9417: __asm("OSCFRQ equ 091Fh");
+[; <" OSCFRQ equ 091Fh ;# ">
+"9463
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9463: __asm("PPSLOCK equ 0E0Fh");
+[; <" PPSLOCK equ 0E0Fh ;# ">
+"9483
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9483: __asm("INTPPS equ 0E10h");
+[; <" INTPPS equ 0E10h ;# ">
+"9535
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9535: __asm("T0CKIPPS equ 0E11h");
+[; <" T0CKIPPS equ 0E11h ;# ">
+"9587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9587: __asm("T1CKIPPS equ 0E12h");
+[; <" T1CKIPPS equ 0E12h ;# ">
+"9639
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9639: __asm("T1GPPS equ 0E13h");
+[; <" T1GPPS equ 0E13h ;# ">
+"9691
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9691: __asm("CCP1PPS equ 0E14h");
+[; <" CCP1PPS equ 0E14h ;# ">
+"9743
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9743: __asm("CCP2PPS equ 0E15h");
+[; <" CCP2PPS equ 0E15h ;# ">
+"9795
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9795: __asm("CWG1PPS equ 0E18h");
+[; <" CWG1PPS equ 0E18h ;# ">
+"9847
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9847: __asm("MDCIN1PPS equ 0E1Ah");
+[; <" MDCIN1PPS equ 0E1Ah ;# ">
+"9899
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9899: __asm("MDCIN2PPS equ 0E1Bh");
+[; <" MDCIN2PPS equ 0E1Bh ;# ">
+"9951
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 9951: __asm("MDMINPPS equ 0E1Ch");
+[; <" MDMINPPS equ 0E1Ch ;# ">
+"10003
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10003: __asm("SSP1CLKPPS equ 0E20h");
+[; <" SSP1CLKPPS equ 0E20h ;# ">
+"10055
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10055: __asm("SSP1DATPPS equ 0E21h");
+[; <" SSP1DATPPS equ 0E21h ;# ">
+"10107
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10107: __asm("SSP1SSPPS equ 0E22h");
+[; <" SSP1SSPPS equ 0E22h ;# ">
+"10159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10159: __asm("RXPPS equ 0E24h");
+[; <" RXPPS equ 0E24h ;# ">
+"10211
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10211: __asm("TXPPS equ 0E25h");
+[; <" TXPPS equ 0E25h ;# ">
+"10263
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10263: __asm("CLCIN0PPS equ 0E28h");
+[; <" CLCIN0PPS equ 0E28h ;# ">
+"10315
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10315: __asm("CLCIN1PPS equ 0E29h");
+[; <" CLCIN1PPS equ 0E29h ;# ">
+"10367
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10367: __asm("CLCIN2PPS equ 0E2Ah");
+[; <" CLCIN2PPS equ 0E2Ah ;# ">
+"10419
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10419: __asm("CLCIN3PPS equ 0E2Bh");
+[; <" CLCIN3PPS equ 0E2Bh ;# ">
+"10471
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10471: __asm("RA0PPS equ 0E90h");
+[; <" RA0PPS equ 0E90h ;# ">
+"10523
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10523: __asm("RA1PPS equ 0E91h");
+[; <" RA1PPS equ 0E91h ;# ">
+"10575
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10575: __asm("RA2PPS equ 0E92h");
+[; <" RA2PPS equ 0E92h ;# ">
+"10627
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10627: __asm("RA4PPS equ 0E94h");
+[; <" RA4PPS equ 0E94h ;# ">
+"10679
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10679: __asm("RA5PPS equ 0E95h");
+[; <" RA5PPS equ 0E95h ;# ">
+"10731
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10731: __asm("CLCDATA equ 0F0Fh");
+[; <" CLCDATA equ 0F0Fh ;# ">
+"10757
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10757: __asm("CLC1CON equ 0F10h");
+[; <" CLC1CON equ 0F10h ;# ">
+"10875
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10875: __asm("CLC1POL equ 0F11h");
+[; <" CLC1POL equ 0F11h ;# ">
+"10953
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 10953: __asm("CLC1SEL0 equ 0F12h");
+[; <" CLC1SEL0 equ 0F12h ;# ">
+"11045
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11045: __asm("CLC1SEL1 equ 0F13h");
+[; <" CLC1SEL1 equ 0F13h ;# ">
+"11137
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11137: __asm("CLC1SEL2 equ 0F14h");
+[; <" CLC1SEL2 equ 0F14h ;# ">
+"11229
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11229: __asm("CLC1SEL3 equ 0F15h");
+[; <" CLC1SEL3 equ 0F15h ;# ">
+"11321
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11321: __asm("CLC1GLS0 equ 0F16h");
+[; <" CLC1GLS0 equ 0F16h ;# ">
+"11433
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11433: __asm("CLC1GLS1 equ 0F17h");
+[; <" CLC1GLS1 equ 0F17h ;# ">
+"11545
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11545: __asm("CLC1GLS2 equ 0F18h");
+[; <" CLC1GLS2 equ 0F18h ;# ">
+"11657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11657: __asm("CLC1GLS3 equ 0F19h");
+[; <" CLC1GLS3 equ 0F19h ;# ">
+"11769
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11769: __asm("CLC2CON equ 0F1Ah");
+[; <" CLC2CON equ 0F1Ah ;# ">
+"11887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11887: __asm("CLC2POL equ 0F1Bh");
+[; <" CLC2POL equ 0F1Bh ;# ">
+"11965
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 11965: __asm("CLC2SEL0 equ 0F1Ch");
+[; <" CLC2SEL0 equ 0F1Ch ;# ">
+"12057
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12057: __asm("CLC2SEL1 equ 0F1Dh");
+[; <" CLC2SEL1 equ 0F1Dh ;# ">
+"12149
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12149: __asm("CLC2SEL2 equ 0F1Eh");
+[; <" CLC2SEL2 equ 0F1Eh ;# ">
+"12241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12241: __asm("CLC2SEL3 equ 0F1Fh");
+[; <" CLC2SEL3 equ 0F1Fh ;# ">
+"12333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12333: __asm("CLC2GLS0 equ 0F20h");
+[; <" CLC2GLS0 equ 0F20h ;# ">
+"12445
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12445: __asm("CLC2GLS1 equ 0F21h");
+[; <" CLC2GLS1 equ 0F21h ;# ">
+"12557
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12557: __asm("CLC2GLS2 equ 0F22h");
+[; <" CLC2GLS2 equ 0F22h ;# ">
+"12669
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12669: __asm("CLC2GLS3 equ 0F23h");
+[; <" CLC2GLS3 equ 0F23h ;# ">
+"12781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12781: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"12813
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12813: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"12833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12833: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"12853
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12853: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"12873
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12873: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"12893
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12893: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"12913
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12913: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"12933
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12933: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"12953
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12953: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"12973
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12973: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"12993
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h: 12993: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"77 ./mcc_generated_files/i2c1_driver.h
+[; ;./mcc_generated_files/i2c1_driver.h: 77: void (*i2c1_driver_busCollisionISR)(void);
+[v _i2c1_driver_busCollisionISR `*F4916 ~T0 @X0 1 e ]
+"78
+[; ;./mcc_generated_files/i2c1_driver.h: 78: void (*i2c1_driver_i2cISR)(void);
+[v _i2c1_driver_i2cISR `*F4918 ~T0 @X0 1 e ]
+"21 ./SSD1306.h
+[; ;./SSD1306.h: 21: uint8_t initial_command[27] ;
+[v _initial_command `uc ~T0 @X0 -> 27 `i e ]
+[v F5126 `uc ~T0 @X0 -> 6 `i t ]
+"22
+[; ;./SSD1306.h: 22: uint8_t TEXT_6x8_char [ 2 ][ 6 ] ;
+[v _TEXT_6x8_char `F5126 ~T0 @X0 -> 2 `i e ]
+"5 SSD1306.c
+[; ;SSD1306.c: 5: uint8_t initial_command[27] = {
+[v _initial_command `uc ~T0 @X0 -> 27 `i e ]
+[i _initial_command
+:U ..
+-> -> 0 `i `uc
+-> -> 174 `i `uc
+-> -> 213 `i `uc
+-> -> 128 `i `uc
+-> -> 168 `i `uc
+-> -> 63 `i `uc
+-> -> 211 `i `uc
+-> -> 0 `i `uc
+-> -> 64 `i `uc
+-> -> 141 `i `uc
+-> -> 20 `i `uc
+-> -> 32 `i `uc
+-> -> 0 `i `uc
+-> -> 161 `i `uc
+-> -> 200 `i `uc
+-> -> 218 `i `uc
+-> -> 18 `i `uc
+-> -> 129 `i `uc
+-> -> 207 `i `uc
+-> -> 217 `i `uc
+-> -> 241 `i `uc
+-> -> 219 `i `uc
+-> -> 64 `i `uc
+-> -> 46 `i `uc
+-> -> 164 `i `uc
+-> -> 166 `i `uc
+-> -> 175 `i `uc
+..
+]
+[v F5204 `uc ~T0 @X0 -> 6 `i t ]
+"11
+[; ;SSD1306.c: 11: uint8_t TEXT_6x8_char [ 2 ][ 6 ] = {
+[v _TEXT_6x8_char `F5204 ~T0 @X0 -> 2 `i e ]
+[i _TEXT_6x8_char
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 96 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+..
+..
+]
+[v F5206 `Eus ~T0 @X0 -> 11 `i t ]
+"30
+[; ;SSD1306.c: 30: __eeprom uint16_t TEXT_11x16[11][11] = {
+[v _TEXT_11x16 `F5206 ~T0 @X0 -> 11 `i e ]
+[i _TEXT_11x16
+:U ..
+:U ..
+-> -> 2040 `i `us
+-> -> 8190 `i `us
+-> -> 7686 `i `us
+-> -> 13059 `i `us
+-> -> 12675 `i `us
+-> -> 12483 `i `us
+-> -> 12387 `i `us
+-> -> 12339 `i `us
+-> -> 6174 `i `us
+-> -> 8190 `i `us
+-> -> 2040 `i `us
+..
+:U ..
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 12300 `i `us
+-> -> 12300 `i `us
+-> -> 12302 `i `us
+-> -> 16383 `i `us
+-> -> 16383 `i `us
+-> -> 12288 `i `us
+-> -> 12288 `i `us
+-> -> 12288 `i `us
+-> -> 0 `i `us
+..
+:U ..
+-> -> 12316 `i `us
+-> -> 14366 `i `us
+-> -> 15367 `i `us
+-> -> 15875 `i `us
+-> -> 14083 `i `us
+-> -> 13187 `i `us
+-> -> 12739 `i `us
+-> -> 12515 `i `us
+-> -> 12407 `i `us
+-> -> 12350 `i `us
+-> -> 12316 `i `us
+..
+:U ..
+-> -> 3084 `i `us
+-> -> 7182 `i `us
+-> -> 14343 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 14823 `i `us
+-> -> 8062 `i `us
+-> -> 3644 `i `us
+..
+:U ..
+-> -> 960 `i `us
+-> -> 992 `i `us
+-> -> 880 `i `us
+-> -> 824 `i `us
+-> -> 796 `i `us
+-> -> 782 `i `us
+-> -> 775 `i `us
+-> -> 16383 `i `us
+-> -> 16383 `i `us
+-> -> 768 `i `us
+-> -> 768 `i `us
+..
+:U ..
+-> -> 3135 `i `us
+-> -> 7295 `i `us
+-> -> 14435 `i `us
+-> -> 12387 `i `us
+-> -> 12387 `i `us
+-> -> 12387 `i `us
+-> -> 12387 `i `us
+-> -> 12387 `i `us
+-> -> 14563 `i `us
+-> -> 8131 `i `us
+-> -> 3971 `i `us
+..
+:U ..
+-> -> 4032 `i `us
+-> -> 8176 `i `us
+-> -> 14840 `i `us
+-> -> 12508 `i `us
+-> -> 12494 `i `us
+-> -> 12487 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 14787 `i `us
+-> -> 8064 `i `us
+-> -> 3840 `i `us
+..
+:U ..
+-> -> 3 `i `us
+-> -> 3 `i `us
+-> -> 3 `i `us
+-> -> 12291 `i `us
+-> -> 15363 `i `us
+-> -> 3843 `i `us
+-> -> 963 `i `us
+-> -> 243 `i `us
+-> -> 63 `i `us
+-> -> 15 `i `us
+-> -> 3 `i `us
+..
+:U ..
+-> -> 3840 `i `us
+-> -> 8124 `i `us
+-> -> 14846 `i `us
+-> -> 12519 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 12519 `i `us
+-> -> 14846 `i `us
+-> -> 8124 `i `us
+-> -> 3840 `i `us
+..
+:U ..
+-> -> 60 `i `us
+-> -> 126 `i `us
+-> -> 12519 `i `us
+-> -> 12483 `i `us
+-> -> 12483 `i `us
+-> -> 14531 `i `us
+-> -> 7363 `i `us
+-> -> 3779 `i `us
+-> -> 2023 `i `us
+-> -> 1022 `i `us
+-> -> 252 `i `us
+..
+:U ..
+-> -> 1008 `i `us
+-> -> 4092 `i `us
+-> -> 7182 `i `us
+-> -> 14343 `i `us
+-> -> 12291 `i `us
+-> -> 12291 `i `us
+-> -> 12291 `i `us
+-> -> 14343 `i `us
+-> -> 7182 `i `us
+-> -> 3084 `i `us
+-> -> 0 `i `us
+..
+..
+]
+"46
+[; ;SSD1306.c: 46: void OLED_initial( ) {
+[v _OLED_initial `(v ~T0 @X0 1 ef ]
+{
+[e :U _OLED_initial ]
+[f ]
+"63
+[; ;SSD1306.c: 63:     I2C_Start() ;
+[e ( _I2C_Start ..  ]
+"66
+[; ;SSD1306.c: 66:     I2C_Write( 0x78 ) ;
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"69
+[; ;SSD1306.c: 69:     for ( uint16_t i = 0 ; i < 27 ; i++ )
+{
+[v _i `us ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `us ]
+[e $ < -> _i `ui -> -> 27 `i `ui 666  ]
+[e $U 667  ]
+[e :U 666 ]
+"70
+[; ;SSD1306.c: 70:         I2C_Write( initial_command[i] );
+[e ( _I2C_Write (1 *U + &U _initial_command * -> _i `ux -> -> # *U &U _initial_command `ui `ux ]
+[e ++ _i -> -> 1 `i `us ]
+[e $ < -> _i `ui -> -> 27 `i `ui 666  ]
+[e :U 667 ]
+}
+"73
+[; ;SSD1306.c: 73:     I2C_Stop () ;
+[e ( _I2C_Stop ..  ]
+"75
+[; ;SSD1306.c: 75: }
+[e :UE 665 ]
+}
+"77
+[; ;SSD1306.c: 77: void OLED_setXY(uint8_t x, uint8_t y) {
+[v _OLED_setXY `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _OLED_setXY ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[f ]
+"79
+[; ;SSD1306.c: 79:     if (x > 127) x = 127;
+[e $ ! > -> _x `i -> 127 `i 670  ]
+[e = _x -> -> 127 `i `uc ]
+[e :U 670 ]
+"80
+[; ;SSD1306.c: 80:     if (y > 7) y = 7;
+[e $ ! > -> _y `i -> 7 `i 671  ]
+[e = _y -> -> 7 `i `uc ]
+[e :U 671 ]
+"82
+[; ;SSD1306.c: 82:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"85
+[; ;SSD1306.c: 85:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"87
+[; ;SSD1306.c: 87:     I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"89
+[; ;SSD1306.c: 89:     I2C_Write(0x10 | (x >> 4));
+[e ( _I2C_Write (1 -> | -> 16 `i >> -> _x `i -> 4 `i `uc ]
+"90
+[; ;SSD1306.c: 90:     I2C_Write(0x00 | (x & 0x0F));
+[e ( _I2C_Write (1 -> | -> 0 `i & -> _x `i -> 15 `i `uc ]
+"91
+[; ;SSD1306.c: 91:     I2C_Write(0xb0 | y);
+[e ( _I2C_Write (1 -> | -> 176 `i -> _y `i `uc ]
+"94
+[; ;SSD1306.c: 94:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"96
+[; ;SSD1306.c: 96: }
+[e :UE 669 ]
+}
+"98
+[; ;SSD1306.c: 98: void OLED_clear() {
+[v _OLED_clear `(v ~T0 @X0 1 ef ]
+{
+[e :U _OLED_clear ]
+[f ]
+"99
+[; ;SSD1306.c: 99:     OLED_setXY(0, 0);
+[e ( _OLED_setXY (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"101
+[; ;SSD1306.c: 101:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"103
+[; ;SSD1306.c: 103:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"104
+[; ;SSD1306.c: 104:     I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"105
+[; ;SSD1306.c: 105:     for (uint16_t i = 0; i < 1024; i++)
+{
+[v _i `us ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `us ]
+[e $ < -> _i `ui -> -> 1024 `i `ui 673  ]
+[e $U 674  ]
+[e :U 673 ]
+"106
+[; ;SSD1306.c: 106:         I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+[e ++ _i -> -> 1 `i `us ]
+[e $ < -> _i `ui -> -> 1024 `i `ui 673  ]
+[e :U 674 ]
+}
+"108
+[; ;SSD1306.c: 108:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"109
+[; ;SSD1306.c: 109: }
+[e :UE 672 ]
+}
+"111
+[; ;SSD1306.c: 111: void OLED_write_num(uint8_t num) {
+[v _OLED_write_num `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _OLED_write_num ]
+[v _num `uc ~T0 @X0 1 r1 ]
+[f ]
+"113
+[; ;SSD1306.c: 113:     if (num > 13) num = 13;
+[e $ ! > -> _num `i -> 13 `i 677  ]
+[e = _num -> -> 13 `i `uc ]
+[e :U 677 ]
+"115
+[; ;SSD1306.c: 115:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"116
+[; ;SSD1306.c: 116:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"117
+[; ;SSD1306.c: 117:     I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"118
+[; ;SSD1306.c: 118:     for (uint8_t i = 0; i < 6; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 6 `i 678  ]
+[e $U 679  ]
+[e :U 678 ]
+"119
+[; ;SSD1306.c: 119:         I2C_Write(TEXT_6x8_char[ num ][ i ]);
+[e ( _I2C_Write (1 *U + &U *U + &U _TEXT_6x8_char * -> _num `ux -> * -> # *U &U *U &U _TEXT_6x8_char `ui -> -> 6 `i `ui `ux * -> _i `ux -> -> # *U &U *U + &U _TEXT_6x8_char * -> _num `ux -> * -> # *U &U *U &U _TEXT_6x8_char `ui -> -> 6 `i `ui `ux `ui `ux ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 6 `i 678  ]
+[e :U 679 ]
+}
+"120
+[; ;SSD1306.c: 120:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"121
+[; ;SSD1306.c: 121: }
+[e :UE 676 ]
+}
+"123
+[; ;SSD1306.c: 123: void OLED_write_num_16(uint8_t num , uint8_t x, uint8_t y ) {
+[v _OLED_write_num_16 `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _OLED_write_num_16 ]
+[v _num `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _y `uc ~T0 @X0 1 r3 ]
+[f ]
+"125
+[; ;SSD1306.c: 125:     if (num > 13) num = 13;
+[e $ ! > -> _num `i -> 13 `i 682  ]
+[e = _num -> -> 13 `i `uc ]
+[e :U 682 ]
+"127
+[; ;SSD1306.c: 127:     OLED_setXY( x, y);
+[e ( _OLED_setXY (2 , _x _y ]
+"129
+[; ;SSD1306.c: 129:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"130
+[; ;SSD1306.c: 130:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"131
+[; ;SSD1306.c: 131:     I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"132
+[; ;SSD1306.c: 132:     for (uint8_t i = 0; i < 11; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 11 `i 683  ]
+[e $U 684  ]
+[e :U 683 ]
+"133
+[; ;SSD1306.c: 133:         I2C_Write( TEXT_11x16[ num ][ i ] & 0x00ff );
+[e ( _I2C_Write (1 -> & -> *U + &U *U + &U _TEXT_11x16 * -> _num `ux -> * -> # *U &U *U &U _TEXT_11x16 `ui -> -> 11 `i `ui `ux * -> _i `ux -> -> # *U &U *U + &U _TEXT_11x16 * -> _num `ux -> * -> # *U &U *U &U _TEXT_11x16 `ui -> -> 11 `i `ui `ux `ui `ux `ui -> -> 255 `i `ui `uc ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 11 `i 683  ]
+[e :U 684 ]
+}
+"134
+[; ;SSD1306.c: 134:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"136
+[; ;SSD1306.c: 136:     OLED_setXY( x, y+1 );
+[e ( _OLED_setXY (2 , _x -> + -> _y `i -> 1 `i `uc ]
+"138
+[; ;SSD1306.c: 138:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"139
+[; ;SSD1306.c: 139:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"140
+[; ;SSD1306.c: 140:     I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"141
+[; ;SSD1306.c: 141:     for (uint8_t i = 0; i < 11; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 11 `i 686  ]
+[e $U 687  ]
+[e :U 686 ]
+"142
+[; ;SSD1306.c: 142:         I2C_Write( (TEXT_11x16[ num ][ i ] & 0xff00) >>8 );
+[e ( _I2C_Write (1 -> >> & -> *U + &U *U + &U _TEXT_11x16 * -> _num `ux -> * -> # *U &U *U &U _TEXT_11x16 `ui -> -> 11 `i `ui `ux * -> _i `ux -> -> # *U &U *U + &U _TEXT_11x16 * -> _num `ux -> * -> # *U &U *U &U _TEXT_11x16 `ui -> -> 11 `i `ui `ux `ui `ux `ui -> 65280 `ui -> 8 `i `uc ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 11 `i 686  ]
+[e :U 687 ]
+}
+"143
+[; ;SSD1306.c: 143:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"145
+[; ;SSD1306.c: 145: }
+[e :UE 681 ]
+}
+"147
+[; ;SSD1306.c: 147: void OLED_display(_Bool x) {
+[v _OLED_display `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _OLED_display ]
+[v _x `a ~T0 @X0 1 r1 ]
+[f ]
+"149
+[; ;SSD1306.c: 149:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"151
+[; ;SSD1306.c: 151:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"152
+[; ;SSD1306.c: 152:     I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"154
+[; ;SSD1306.c: 154:     (x) ? I2C_Write(0xAF) : I2C_Write(0xAE);
+[e ? != -> _x `i -> 0 `i : ( _I2C_Write (1 -> -> 175 `i `uc ( _I2C_Write (1 -> -> 174 `i `uc ]
+"156
+[; ;SSD1306.c: 156:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"157
+[; ;SSD1306.c: 157: }
+[e :UE 689 ]
+}
+"159
+[; ;SSD1306.c: 159: void OLED_inverse(_Bool x) {
+[v _OLED_inverse `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _OLED_inverse ]
+[v _x `a ~T0 @X0 1 r1 ]
+[f ]
+"161
+[; ;SSD1306.c: 161:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"163
+[; ;SSD1306.c: 163:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"164
+[; ;SSD1306.c: 164:     I2C_Write(0x00);
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"166
+[; ;SSD1306.c: 166:     (x) ? I2C_Write(0xA7) : I2C_Write(0xA6);
+[e ? != -> _x `i -> 0 `i : ( _I2C_Write (1 -> -> 167 `i `uc ( _I2C_Write (1 -> -> 166 `i `uc ]
+"168
+[; ;SSD1306.c: 168:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"169
+[; ;SSD1306.c: 169: }
+[e :UE 690 ]
+}
+"171
+[; ;SSD1306.c: 171: void num_print(int16_t x) {
+[v _num_print `(v ~T0 @X0 1 ef1`s ]
+{
+[e :U _num_print ]
+[v _x `s ~T0 @X0 1 r1 ]
+[f ]
+"172
+[; ;SSD1306.c: 172:     (x < 0) ? OLED_write(21) : OLED_write(20);
+[e ? < -> _x `i -> 0 `i : ( _OLED_write (1 -> -> 21 `i `uc ( _OLED_write (1 -> -> 20 `i `uc ]
+"173
+[; ;SSD1306.c: 173:     x = abs(x);
+[e = _x -> ( _abs (1 -> _x `i `s ]
+"175
+[; ;SSD1306.c: 175:     OLED_write((x / 100));
+[e ( _OLED_write (1 -> / -> _x `i -> 100 `i `uc ]
+"176
+[; ;SSD1306.c: 176:     OLED_write(22);
+[e ( _OLED_write (1 -> -> 22 `i `uc ]
+"177
+[; ;SSD1306.c: 177:     OLED_write((x / 10) % 10);
+[e ( _OLED_write (1 -> % / -> _x `i -> 10 `i -> 10 `i `uc ]
+"178
+[; ;SSD1306.c: 178:     OLED_write((x % 10));
+[e ( _OLED_write (1 -> % -> _x `i -> 10 `i `uc ]
+"179
+[; ;SSD1306.c: 179: }
+[e :UE 691 ]
+}
+"181
+[; ;SSD1306.c: 181: void OLED_write(uint8_t num) {
+[v _OLED_write `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _OLED_write ]
+[v _num `uc ~T0 @X0 1 r1 ]
+[f ]
+"183
+[; ;SSD1306.c: 183:     if (num > 12) num = 12;
+[e $ ! > -> _num `i -> 12 `i 693  ]
+[e = _num -> -> 12 `i `uc ]
+[e :U 693 ]
+"185
+[; ;SSD1306.c: 185:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"186
+[; ;SSD1306.c: 186:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"187
+[; ;SSD1306.c: 187:     I2C_Write(0x40);
+[e ( _I2C_Write (1 -> -> 64 `i `uc ]
+"188
+[; ;SSD1306.c: 188:     I2C_Write(num);
+[e ( _I2C_Write (1 _num ]
+"189
+[; ;SSD1306.c: 189:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"190
+[; ;SSD1306.c: 190: }
+[e :UE 692 ]
+}
+"199
+[; ;SSD1306.c: 199: void SSD1306_Set_Contrast( uint8_t contrast ){
+[v _SSD1306_Set_Contrast `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SSD1306_Set_Contrast ]
+[v _contrast `uc ~T0 @X0 1 r1 ]
+[f ]
+"200
+[; ;SSD1306.c: 200:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"201
+[; ;SSD1306.c: 201:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"202
+[; ;SSD1306.c: 202:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"203
+[; ;SSD1306.c: 203:     I2C_Write( 0x81 );
+[e ( _I2C_Write (1 -> -> 129 `i `uc ]
+"204
+[; ;SSD1306.c: 204:     I2C_Write( contrast );
+[e ( _I2C_Write (1 _contrast ]
+"205
+[; ;SSD1306.c: 205:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"206
+[; ;SSD1306.c: 206: }
+[e :UE 694 ]
+}
+"208
+[; ;SSD1306.c: 208: void SSD1306_Set_Entire_Display_OFF( void ) {
+[v _SSD1306_Set_Entire_Display_OFF `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Entire_Display_OFF ]
+[f ]
+"209
+[; ;SSD1306.c: 209:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"210
+[; ;SSD1306.c: 210:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"211
+[; ;SSD1306.c: 211:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"212
+[; ;SSD1306.c: 212:     I2C_Write( 0xA4 );
+[e ( _I2C_Write (1 -> -> 164 `i `uc ]
+"213
+[; ;SSD1306.c: 213:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"214
+[; ;SSD1306.c: 214: }
+[e :UE 695 ]
+}
+"216
+[; ;SSD1306.c: 216: void SSD1306_Set_Entire_Display_ON( void ) {
+[v _SSD1306_Set_Entire_Display_ON `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Entire_Display_ON ]
+[f ]
+"217
+[; ;SSD1306.c: 217:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"218
+[; ;SSD1306.c: 218:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"219
+[; ;SSD1306.c: 219:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"220
+[; ;SSD1306.c: 220:     I2C_Write( 0xA5 );
+[e ( _I2C_Write (1 -> -> 165 `i `uc ]
+"221
+[; ;SSD1306.c: 221:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"222
+[; ;SSD1306.c: 222: }
+[e :UE 696 ]
+}
+"224
+[; ;SSD1306.c: 224: void SSD1306_Set_Normal_Display ( void ) {
+[v _SSD1306_Set_Normal_Display `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Normal_Display ]
+[f ]
+"225
+[; ;SSD1306.c: 225:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"226
+[; ;SSD1306.c: 226:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"227
+[; ;SSD1306.c: 227:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"228
+[; ;SSD1306.c: 228:     I2C_Write( 0xA6 );
+[e ( _I2C_Write (1 -> -> 166 `i `uc ]
+"229
+[; ;SSD1306.c: 229:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"230
+[; ;SSD1306.c: 230: }
+[e :UE 697 ]
+}
+"232
+[; ;SSD1306.c: 232: void SSD1306_Set_Inverse_Display ( void ) {
+[v _SSD1306_Set_Inverse_Display `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Inverse_Display ]
+[f ]
+"233
+[; ;SSD1306.c: 233:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"234
+[; ;SSD1306.c: 234:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"235
+[; ;SSD1306.c: 235:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"236
+[; ;SSD1306.c: 236:     I2C_Write( 0xA7 );
+[e ( _I2C_Write (1 -> -> 167 `i `uc ]
+"237
+[; ;SSD1306.c: 237:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"238
+[; ;SSD1306.c: 238: }
+[e :UE 698 ]
+}
+"240
+[; ;SSD1306.c: 240: void SSD1306_Set_Display_ON( void ){
+[v _SSD1306_Set_Display_ON `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Display_ON ]
+[f ]
+"241
+[; ;SSD1306.c: 241:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"242
+[; ;SSD1306.c: 242:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"243
+[; ;SSD1306.c: 243:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"244
+[; ;SSD1306.c: 244:     I2C_Write( 0xAF );
+[e ( _I2C_Write (1 -> -> 175 `i `uc ]
+"245
+[; ;SSD1306.c: 245:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"246
+[; ;SSD1306.c: 246: }
+[e :UE 699 ]
+}
+"248
+[; ;SSD1306.c: 248: void SSD1306_Set_Display_OFF( void ){
+[v _SSD1306_Set_Display_OFF `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Display_OFF ]
+[f ]
+"249
+[; ;SSD1306.c: 249:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"250
+[; ;SSD1306.c: 250:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"251
+[; ;SSD1306.c: 251:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"252
+[; ;SSD1306.c: 252:     I2C_Write( 0xAE );
+[e ( _I2C_Write (1 -> -> 174 `i `uc ]
+"253
+[; ;SSD1306.c: 253:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"254
+[; ;SSD1306.c: 254: }
+[e :UE 700 ]
+}
+"260
+[; ;SSD1306.c: 260: void SSD1306_Set_Continuous_Horizontal_Scroll( _Bool Direction ,
+[v _SSD1306_Set_Continuous_Horizontal_Scroll `(v ~T0 @X0 1 ef4`a`uc`uc`uc ]
+"261
+[; ;SSD1306.c: 261:  uint8_t Start_Page , uint8_t End_Page , uint8_t Frames ){
+{
+[e :U _SSD1306_Set_Continuous_Horizontal_Scroll ]
+"260
+[; ;SSD1306.c: 260: void SSD1306_Set_Continuous_Horizontal_Scroll( _Bool Direction ,
+[v _Direction `a ~T0 @X0 1 r1 ]
+"261
+[; ;SSD1306.c: 261:  uint8_t Start_Page , uint8_t End_Page , uint8_t Frames ){
+[v _Start_Page `uc ~T0 @X0 1 r2 ]
+[v _End_Page `uc ~T0 @X0 1 r3 ]
+[v _Frames `uc ~T0 @X0 1 r4 ]
+[f ]
+"263
+[; ;SSD1306.c: 263:  if( Start_Page > 0x07 ) Start_Page = 0x07 ;
+[e $ ! > -> _Start_Page `i -> 7 `i 702  ]
+[e = _Start_Page -> -> 7 `i `uc ]
+[e :U 702 ]
+"264
+[; ;SSD1306.c: 264:  if( End_Page > 0x07 ) End_Page = 0x07 ;
+[e $ ! > -> _End_Page `i -> 7 `i 703  ]
+[e = _End_Page -> -> 7 `i `uc ]
+[e :U 703 ]
+"265
+[; ;SSD1306.c: 265:  if( Frames > 0x07 ) Frames = 0x07 ;
+[e $ ! > -> _Frames `i -> 7 `i 704  ]
+[e = _Frames -> -> 7 `i `uc ]
+[e :U 704 ]
+"267
+[; ;SSD1306.c: 267:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"268
+[; ;SSD1306.c: 268:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"269
+[; ;SSD1306.c: 269:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"270
+[; ;SSD1306.c: 270:     I2C_Write( 0x26 | Direction );
+[e ( _I2C_Write (1 -> | -> 38 `i -> _Direction `i `uc ]
+"271
+[; ;SSD1306.c: 271:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"272
+[; ;SSD1306.c: 272:     I2C_Write( Start_Page );
+[e ( _I2C_Write (1 _Start_Page ]
+"273
+[; ;SSD1306.c: 273:     I2C_Write( Frames );
+[e ( _I2C_Write (1 _Frames ]
+"274
+[; ;SSD1306.c: 274:     I2C_Write( End_Page );
+[e ( _I2C_Write (1 _End_Page ]
+"275
+[; ;SSD1306.c: 275:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"276
+[; ;SSD1306.c: 276:     I2C_Write( 0xFF );
+[e ( _I2C_Write (1 -> -> 255 `i `uc ]
+"277
+[; ;SSD1306.c: 277:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"278
+[; ;SSD1306.c: 278: }
+[e :UE 701 ]
+}
+"280
+[; ;SSD1306.c: 280: void SSD1306_Set_Continuous_Vertical_and_Horizontal_Scroll(
+[v _SSD1306_Set_Continuous_Vertical_and_Horizontal_Scroll `(v ~T0 @X0 1 ef5`a`uc`uc`uc`uc ]
+"282
+[; ;SSD1306.c: 282:   uint8_t Frames , uint8_t Vertical_Scroll_Offset ){
+{
+[e :U _SSD1306_Set_Continuous_Vertical_and_Horizontal_Scroll ]
+"281
+[; ;SSD1306.c: 281:   _Bool Direction , uint8_t Start_Page , uint8_t End_Page ,
+[v _Direction `a ~T0 @X0 1 r1 ]
+[v _Start_Page `uc ~T0 @X0 1 r2 ]
+[v _End_Page `uc ~T0 @X0 1 r3 ]
+"282
+[; ;SSD1306.c: 282:   uint8_t Frames , uint8_t Vertical_Scroll_Offset ){
+[v _Frames `uc ~T0 @X0 1 r4 ]
+[v _Vertical_Scroll_Offset `uc ~T0 @X0 1 r5 ]
+[f ]
+"284
+[; ;SSD1306.c: 284:  if( Start_Page > 0x07 ) Start_Page = 0x07 ;
+[e $ ! > -> _Start_Page `i -> 7 `i 706  ]
+[e = _Start_Page -> -> 7 `i `uc ]
+[e :U 706 ]
+"285
+[; ;SSD1306.c: 285:  if( End_Page > 0x07 ) End_Page = 0x07 ;
+[e $ ! > -> _End_Page `i -> 7 `i 707  ]
+[e = _End_Page -> -> 7 `i `uc ]
+[e :U 707 ]
+"286
+[; ;SSD1306.c: 286:  if( Frames > 0x07 ) Frames = 0x07 ;
+[e $ ! > -> _Frames `i -> 7 `i 708  ]
+[e = _Frames -> -> 7 `i `uc ]
+[e :U 708 ]
+"287
+[; ;SSD1306.c: 287:  if( Vertical_Scroll_Offset > 0x3F )
+[e $ ! > -> _Vertical_Scroll_Offset `i -> 63 `i 709  ]
+"288
+[; ;SSD1306.c: 288:   Vertical_Scroll_Offset = 0x3F ;
+[e = _Vertical_Scroll_Offset -> -> 63 `i `uc ]
+[e :U 709 ]
+"290
+[; ;SSD1306.c: 290:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"291
+[; ;SSD1306.c: 291:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"292
+[; ;SSD1306.c: 292:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"293
+[; ;SSD1306.c: 293:     I2C_Write( 0x29 + Direction );
+[e ( _I2C_Write (1 -> + -> 41 `i -> _Direction `i `uc ]
+"294
+[; ;SSD1306.c: 294:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"295
+[; ;SSD1306.c: 295:     I2C_Write( Start_Page );
+[e ( _I2C_Write (1 _Start_Page ]
+"296
+[; ;SSD1306.c: 296:     I2C_Write( Frames );
+[e ( _I2C_Write (1 _Frames ]
+"297
+[; ;SSD1306.c: 297:     I2C_Write( End_Page );
+[e ( _I2C_Write (1 _End_Page ]
+"298
+[; ;SSD1306.c: 298:     I2C_Write( Vertical_Scroll_Offset );
+[e ( _I2C_Write (1 _Vertical_Scroll_Offset ]
+"299
+[; ;SSD1306.c: 299:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"300
+[; ;SSD1306.c: 300: }
+[e :UE 705 ]
+}
+"302
+[; ;SSD1306.c: 302: void SSD1306_Set_Deactivate_scroll( void ){
+[v _SSD1306_Set_Deactivate_scroll `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Deactivate_scroll ]
+[f ]
+"303
+[; ;SSD1306.c: 303:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"304
+[; ;SSD1306.c: 304:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"305
+[; ;SSD1306.c: 305:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"306
+[; ;SSD1306.c: 306:     I2C_Write( 0x2E );
+[e ( _I2C_Write (1 -> -> 46 `i `uc ]
+"307
+[; ;SSD1306.c: 307:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"308
+[; ;SSD1306.c: 308: }
+[e :UE 710 ]
+}
+"310
+[; ;SSD1306.c: 310: void SSD1306_Set_Activate_scroll( void ){
+[v _SSD1306_Set_Activate_scroll `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Activate_scroll ]
+[f ]
+"311
+[; ;SSD1306.c: 311:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"312
+[; ;SSD1306.c: 312:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"313
+[; ;SSD1306.c: 313:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"314
+[; ;SSD1306.c: 314:     I2C_Write( 0x2F );
+[e ( _I2C_Write (1 -> -> 47 `i `uc ]
+"315
+[; ;SSD1306.c: 315:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"316
+[; ;SSD1306.c: 316: }
+[e :UE 711 ]
+}
+"318
+[; ;SSD1306.c: 318: void SSD1306_Set_Vertical_Scroll_Area( uint8_t Start_Row ,
+[v _SSD1306_Set_Vertical_Scroll_Area `(v ~T0 @X0 1 ef2`uc`uc ]
+"319
+[; ;SSD1306.c: 319:             uint8_t Scroll_rows ){
+{
+[e :U _SSD1306_Set_Vertical_Scroll_Area ]
+"318
+[; ;SSD1306.c: 318: void SSD1306_Set_Vertical_Scroll_Area( uint8_t Start_Row ,
+[v _Start_Row `uc ~T0 @X0 1 r1 ]
+"319
+[; ;SSD1306.c: 319:             uint8_t Scroll_rows ){
+[v _Scroll_rows `uc ~T0 @X0 1 r2 ]
+[f ]
+"320
+[; ;SSD1306.c: 320:  if ( Start_Row > 0x3F ) Start_Row = 0x3F ;
+[e $ ! > -> _Start_Row `i -> 63 `i 713  ]
+[e = _Start_Row -> -> 63 `i `uc ]
+[e :U 713 ]
+"321
+[; ;SSD1306.c: 321:  if ( Scroll_rows > 0x40 ) Scroll_rows = 0x40 ;
+[e $ ! > -> _Scroll_rows `i -> 64 `i 714  ]
+[e = _Scroll_rows -> -> 64 `i `uc ]
+[e :U 714 ]
+"323
+[; ;SSD1306.c: 323:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"324
+[; ;SSD1306.c: 324:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"325
+[; ;SSD1306.c: 325:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"326
+[; ;SSD1306.c: 326:     I2C_Write( 0xA3 );
+[e ( _I2C_Write (1 -> -> 163 `i `uc ]
+"327
+[; ;SSD1306.c: 327:     I2C_Write( Start_Row );
+[e ( _I2C_Write (1 _Start_Row ]
+"328
+[; ;SSD1306.c: 328:     I2C_Write( Scroll_rows );
+[e ( _I2C_Write (1 _Scroll_rows ]
+"329
+[; ;SSD1306.c: 329:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"330
+[; ;SSD1306.c: 330: }
+[e :UE 712 ]
+}
+"336
+[; ;SSD1306.c: 336: void SSD1306_Set_Memmory_Address_Horizontal_Mode( void ){
+[v _SSD1306_Set_Memmory_Address_Horizontal_Mode `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Memmory_Address_Horizontal_Mode ]
+[f ]
+"337
+[; ;SSD1306.c: 337:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"338
+[; ;SSD1306.c: 338:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"339
+[; ;SSD1306.c: 339:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"340
+[; ;SSD1306.c: 340:     I2C_Write( 0x20 );
+[e ( _I2C_Write (1 -> -> 32 `i `uc ]
+"341
+[; ;SSD1306.c: 341:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"342
+[; ;SSD1306.c: 342:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"343
+[; ;SSD1306.c: 343: }
+[e :UE 715 ]
+}
+"345
+[; ;SSD1306.c: 345: void SSD1306_Set_Memmory_Address_Vertical_Mode( void ){
+[v _SSD1306_Set_Memmory_Address_Vertical_Mode `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Memmory_Address_Vertical_Mode ]
+[f ]
+"346
+[; ;SSD1306.c: 346:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"347
+[; ;SSD1306.c: 347:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"348
+[; ;SSD1306.c: 348:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"349
+[; ;SSD1306.c: 349:     I2C_Write( 0x20 );
+[e ( _I2C_Write (1 -> -> 32 `i `uc ]
+"350
+[; ;SSD1306.c: 350:     I2C_Write( 0x01 );
+[e ( _I2C_Write (1 -> -> 1 `i `uc ]
+"351
+[; ;SSD1306.c: 351:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"352
+[; ;SSD1306.c: 352: }
+[e :UE 716 ]
+}
+"354
+[; ;SSD1306.c: 354: void SSD1306_Set_Memmory_Address_Page_Mode( void ){
+[v _SSD1306_Set_Memmory_Address_Page_Mode `(v ~T0 @X0 1 ef ]
+{
+[e :U _SSD1306_Set_Memmory_Address_Page_Mode ]
+[f ]
+"355
+[; ;SSD1306.c: 355:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"356
+[; ;SSD1306.c: 356:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"357
+[; ;SSD1306.c: 357:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"358
+[; ;SSD1306.c: 358:     I2C_Write( 0x20 );
+[e ( _I2C_Write (1 -> -> 32 `i `uc ]
+"359
+[; ;SSD1306.c: 359:     I2C_Write( 0x02 );
+[e ( _I2C_Write (1 -> -> 2 `i `uc ]
+"360
+[; ;SSD1306.c: 360:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"361
+[; ;SSD1306.c: 361: }
+[e :UE 717 ]
+}
+"363
+[; ;SSD1306.c: 363: void SSD1306_Set_XY( uint8_t x, uint8_t y ){
+[v _SSD1306_Set_XY `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _SSD1306_Set_XY ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[f ]
+"365
+[; ;SSD1306.c: 365:     if (x > 127) x = 127 ;
+[e $ ! > -> _x `i -> 127 `i 719  ]
+[e = _x -> -> 127 `i `uc ]
+[e :U 719 ]
+"366
+[; ;SSD1306.c: 366:     if (y > 7) y = 7 ;
+[e $ ! > -> _y `i -> 7 `i 720  ]
+[e = _y -> -> 7 `i `uc ]
+[e :U 720 ]
+"368
+[; ;SSD1306.c: 368:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"369
+[; ;SSD1306.c: 369:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"370
+[; ;SSD1306.c: 370:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"371
+[; ;SSD1306.c: 371:     I2C_Write( 0x10 | (x >> 4) );
+[e ( _I2C_Write (1 -> | -> 16 `i >> -> _x `i -> 4 `i `uc ]
+"372
+[; ;SSD1306.c: 372:     I2C_Write( 0x00 | (x & 0x0F) );
+[e ( _I2C_Write (1 -> | -> 0 `i & -> _x `i -> 15 `i `uc ]
+"373
+[; ;SSD1306.c: 373:     I2C_Write( 0xb0 | y );
+[e ( _I2C_Write (1 -> | -> 176 `i -> _y `i `uc ]
+"374
+[; ;SSD1306.c: 374:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"376
+[; ;SSD1306.c: 376: }
+[e :UE 718 ]
+}
+"378
+[; ;SSD1306.c: 378: void SSD1306_Set_Writed_Area( uint8_t column_start , uint8_t column_end
+[v _SSD1306_Set_Writed_Area `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+"379
+[; ;SSD1306.c: 379:      , uint8_t page_start , uint8_t page_end ){
+{
+[e :U _SSD1306_Set_Writed_Area ]
+"378
+[; ;SSD1306.c: 378: void SSD1306_Set_Writed_Area( uint8_t column_start , uint8_t column_end
+[v _column_start `uc ~T0 @X0 1 r1 ]
+[v _column_end `uc ~T0 @X0 1 r2 ]
+"379
+[; ;SSD1306.c: 379:      , uint8_t page_start , uint8_t page_end ){
+[v _page_start `uc ~T0 @X0 1 r3 ]
+[v _page_end `uc ~T0 @X0 1 r4 ]
+[f ]
+"380
+[; ;SSD1306.c: 380:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"381
+[; ;SSD1306.c: 381:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"382
+[; ;SSD1306.c: 382:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"383
+[; ;SSD1306.c: 383:     I2C_Write( 0x21 );
+[e ( _I2C_Write (1 -> -> 33 `i `uc ]
+"384
+[; ;SSD1306.c: 384:     I2C_Write( column_start );
+[e ( _I2C_Write (1 _column_start ]
+"385
+[; ;SSD1306.c: 385:     I2C_Write( column_end );
+[e ( _I2C_Write (1 _column_end ]
+"386
+[; ;SSD1306.c: 386:     I2C_Write( 0x22 );
+[e ( _I2C_Write (1 -> -> 34 `i `uc ]
+"387
+[; ;SSD1306.c: 387:     I2C_Write( page_start );
+[e ( _I2C_Write (1 _page_start ]
+"388
+[; ;SSD1306.c: 388:     I2C_Write( page_end );
+[e ( _I2C_Write (1 _page_end ]
+"389
+[; ;SSD1306.c: 389:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"390
+[; ;SSD1306.c: 390: }
+[e :UE 721 ]
+}
+"396
+[; ;SSD1306.c: 396: void SSD1306_Set_Display_Start_Line( uint8_t x ){
+[v _SSD1306_Set_Display_Start_Line `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SSD1306_Set_Display_Start_Line ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[f ]
+"397
+[; ;SSD1306.c: 397:  if ( x > 63 ) x = 63 ;
+[e $ ! > -> _x `i -> 63 `i 723  ]
+[e = _x -> -> 63 `i `uc ]
+[e :U 723 ]
+"398
+[; ;SSD1306.c: 398:  x |= 0x40 ;
+[e =| _x -> -> 64 `i `uc ]
+"400
+[; ;SSD1306.c: 400:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"401
+[; ;SSD1306.c: 401:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"402
+[; ;SSD1306.c: 402:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"403
+[; ;SSD1306.c: 403:     I2C_Write( x );
+[e ( _I2C_Write (1 _x ]
+"404
+[; ;SSD1306.c: 404:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"405
+[; ;SSD1306.c: 405: }
+[e :UE 722 ]
+}
+"407
+[; ;SSD1306.c: 407: void SSD1306_Set_Segment_Re_map( _Bool x ){
+[v _SSD1306_Set_Segment_Re_map `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _SSD1306_Set_Segment_Re_map ]
+[v _x `a ~T0 @X0 1 r1 ]
+[f ]
+"408
+[; ;SSD1306.c: 408:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"409
+[; ;SSD1306.c: 409:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"410
+[; ;SSD1306.c: 410:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"411
+[; ;SSD1306.c: 411:     ( x )? I2C_Write( 0xA1 ):I2C_Write( 0xA0 );
+[e ? != -> _x `i -> 0 `i : ( _I2C_Write (1 -> -> 161 `i `uc ( _I2C_Write (1 -> -> 160 `i `uc ]
+"412
+[; ;SSD1306.c: 412:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"413
+[; ;SSD1306.c: 413: }
+[e :UE 724 ]
+}
+"415
+[; ;SSD1306.c: 415: void SSD1306_Set_Multiplex_Ratio( uint8_t x ){
+[v _SSD1306_Set_Multiplex_Ratio `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SSD1306_Set_Multiplex_Ratio ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[f ]
+"416
+[; ;SSD1306.c: 416:  if( x > 63 ) x = 63 ;
+[e $ ! > -> _x `i -> 63 `i 726  ]
+[e = _x -> -> 63 `i `uc ]
+[e $U 727  ]
+"417
+[; ;SSD1306.c: 417:  else if( x < 15 ) x = 15 ;
+[e :U 726 ]
+[e $ ! < -> _x `i -> 15 `i 728  ]
+[e = _x -> -> 15 `i `uc ]
+[e :U 728 ]
+[e :U 727 ]
+"419
+[; ;SSD1306.c: 419:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"420
+[; ;SSD1306.c: 420:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"421
+[; ;SSD1306.c: 421:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"422
+[; ;SSD1306.c: 422:     I2C_Write( 0xA8 );
+[e ( _I2C_Write (1 -> -> 168 `i `uc ]
+"423
+[; ;SSD1306.c: 423:     I2C_Write( x );
+[e ( _I2C_Write (1 _x ]
+"424
+[; ;SSD1306.c: 424:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"426
+[; ;SSD1306.c: 426: }
+[e :UE 725 ]
+}
+"428
+[; ;SSD1306.c: 428: void SSD1306_Set_COM_Output_Scan_Direction( _Bool x ){
+[v _SSD1306_Set_COM_Output_Scan_Direction `(v ~T0 @X0 1 ef1`a ]
+{
+[e :U _SSD1306_Set_COM_Output_Scan_Direction ]
+[v _x `a ~T0 @X0 1 r1 ]
+[f ]
+"429
+[; ;SSD1306.c: 429:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"430
+[; ;SSD1306.c: 430:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"431
+[; ;SSD1306.c: 431:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"432
+[; ;SSD1306.c: 432:     ( x )? I2C_Write( 0xC8 ):I2C_Write( 0xC0 );
+[e ? != -> _x `i -> 0 `i : ( _I2C_Write (1 -> -> 200 `i `uc ( _I2C_Write (1 -> -> 192 `i `uc ]
+"433
+[; ;SSD1306.c: 433:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"434
+[; ;SSD1306.c: 434: }
+[e :UE 729 ]
+}
+"436
+[; ;SSD1306.c: 436: void SSD1306_Set_Display_Offset( uint8_t x ){
+[v _SSD1306_Set_Display_Offset `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SSD1306_Set_Display_Offset ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[f ]
+"437
+[; ;SSD1306.c: 437:  if( x > 63 ) x = 63 ;
+[e $ ! > -> _x `i -> 63 `i 731  ]
+[e = _x -> -> 63 `i `uc ]
+[e :U 731 ]
+"439
+[; ;SSD1306.c: 439:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"440
+[; ;SSD1306.c: 440:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"441
+[; ;SSD1306.c: 441:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"442
+[; ;SSD1306.c: 442:     I2C_Write( 0xD3 );
+[e ( _I2C_Write (1 -> -> 211 `i `uc ]
+"443
+[; ;SSD1306.c: 443:     I2C_Write( x );
+[e ( _I2C_Write (1 _x ]
+"444
+[; ;SSD1306.c: 444:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"445
+[; ;SSD1306.c: 445: }
+[e :UE 730 ]
+}
+"447
+[; ;SSD1306.c: 447: void SSD1306_Set_COM_Pins_Hardware_Configuration( _Bool x , _Bool y ){
+[v _SSD1306_Set_COM_Pins_Hardware_Configuration `(v ~T0 @X0 1 ef2`a`a ]
+{
+[e :U _SSD1306_Set_COM_Pins_Hardware_Configuration ]
+[v _x `a ~T0 @X0 1 r1 ]
+[v _y `a ~T0 @X0 1 r2 ]
+[f ]
+"448
+[; ;SSD1306.c: 448:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"449
+[; ;SSD1306.c: 449:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"450
+[; ;SSD1306.c: 450:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"451
+[; ;SSD1306.c: 451:     I2C_Write( 0xDA );
+[e ( _I2C_Write (1 -> -> 218 `i `uc ]
+"452
+[; ;SSD1306.c: 452:     I2C_Write( (uint8_t)(x<<5) | (uint8_t)(y<<4) | 0x02 );
+[e ( _I2C_Write (1 -> | | -> -> << -> _x `i -> 5 `i `uc `i -> -> << -> _y `i -> 4 `i `uc `i -> 2 `i `uc ]
+"453
+[; ;SSD1306.c: 453:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"454
+[; ;SSD1306.c: 454: }
+[e :UE 732 ]
+}
+"460
+[; ;SSD1306.c: 460: void SSD1306_Set_Display_Clock_Divid_Fosc( uint8_t divide_ratio , uint8_t Fosc ){
+[v _SSD1306_Set_Display_Clock_Divid_Fosc `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _SSD1306_Set_Display_Clock_Divid_Fosc ]
+[v _divide_ratio `uc ~T0 @X0 1 r1 ]
+[v _Fosc `uc ~T0 @X0 1 r2 ]
+[f ]
+"461
+[; ;SSD1306.c: 461:  if( divide_ratio > 0x0F ) divide_ratio = 0x0F ;
+[e $ ! > -> _divide_ratio `i -> 15 `i 734  ]
+[e = _divide_ratio -> -> 15 `i `uc ]
+[e :U 734 ]
+"462
+[; ;SSD1306.c: 462:  if( Fosc > 0x0F ) Fosc = 0x0F ;
+[e $ ! > -> _Fosc `i -> 15 `i 735  ]
+[e = _Fosc -> -> 15 `i `uc ]
+[e :U 735 ]
+"464
+[; ;SSD1306.c: 464:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"465
+[; ;SSD1306.c: 465:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"466
+[; ;SSD1306.c: 466:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"467
+[; ;SSD1306.c: 467:     I2C_Write( 0xD5 );
+[e ( _I2C_Write (1 -> -> 213 `i `uc ]
+"468
+[; ;SSD1306.c: 468:     I2C_Write( (divide_ratio<<4) | Fosc );
+[e ( _I2C_Write (1 -> | << -> _divide_ratio `i -> 4 `i -> _Fosc `i `uc ]
+"469
+[; ;SSD1306.c: 469:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"470
+[; ;SSD1306.c: 470: }
+[e :UE 733 ]
+}
+"472
+[; ;SSD1306.c: 472: void SSD1306_Set_Pre_charge_Period( uint8_t Phase1_period , uint8_t Phase2_period ){
+[v _SSD1306_Set_Pre_charge_Period `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _SSD1306_Set_Pre_charge_Period ]
+[v _Phase1_period `uc ~T0 @X0 1 r1 ]
+[v _Phase2_period `uc ~T0 @X0 1 r2 ]
+[f ]
+"473
+[; ;SSD1306.c: 473:  if( Phase1_period > 0x0F ) Phase1_period = 0x0F ;
+[e $ ! > -> _Phase1_period `i -> 15 `i 737  ]
+[e = _Phase1_period -> -> 15 `i `uc ]
+[e :U 737 ]
+"474
+[; ;SSD1306.c: 474:  if( Phase2_period > 0x0F ) Phase2_period = 0x0F ;
+[e $ ! > -> _Phase2_period `i -> 15 `i 738  ]
+[e = _Phase2_period -> -> 15 `i `uc ]
+[e :U 738 ]
+"476
+[; ;SSD1306.c: 476:  if( Phase1_period & Phase2_period ){
+[e $ ! != & -> _Phase1_period `i -> _Phase2_period `i -> 0 `i 739  ]
+{
+"477
+[; ;SSD1306.c: 477:   I2C_Start();
+[e ( _I2C_Start ..  ]
+"478
+[; ;SSD1306.c: 478:      I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"479
+[; ;SSD1306.c: 479:      I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"480
+[; ;SSD1306.c: 480:      I2C_Write( 0xD9 );
+[e ( _I2C_Write (1 -> -> 217 `i `uc ]
+"481
+[; ;SSD1306.c: 481:      I2C_Write( (Phase2_period<<4) | Phase1_period );
+[e ( _I2C_Write (1 -> | << -> _Phase2_period `i -> 4 `i -> _Phase1_period `i `uc ]
+"482
+[; ;SSD1306.c: 482:      I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"483
+[; ;SSD1306.c: 483:  }
+}
+[e :U 739 ]
+"484
+[; ;SSD1306.c: 484: }
+[e :UE 736 ]
+}
+"486
+[; ;SSD1306.c: 486: void SSD1306_Set_Vcomh_Deselect_Level( uint8_t x ){
+[v _SSD1306_Set_Vcomh_Deselect_Level `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SSD1306_Set_Vcomh_Deselect_Level ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[f ]
+"487
+[; ;SSD1306.c: 487:  x &= 0x07 ;
+[e =& _x -> -> 7 `i `uc ]
+"488
+[; ;SSD1306.c: 488:  x <<= 4 ;
+[e =<< _x -> -> 4 `i `uc ]
+"490
+[; ;SSD1306.c: 490:  I2C_Start();
+[e ( _I2C_Start ..  ]
+"491
+[; ;SSD1306.c: 491:     I2C_Write( 0x78 );
+[e ( _I2C_Write (1 -> -> 120 `i `uc ]
+"492
+[; ;SSD1306.c: 492:     I2C_Write( 0x00 );
+[e ( _I2C_Write (1 -> -> 0 `i `uc ]
+"493
+[; ;SSD1306.c: 493:     I2C_Write( 0xDB );
+[e ( _I2C_Write (1 -> -> 219 `i `uc ]
+"494
+[; ;SSD1306.c: 494:  I2C_Write( x );
+[e ( _I2C_Write (1 _x ]
+"495
+[; ;SSD1306.c: 495:  I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"496
+[; ;SSD1306.c: 496: }
+[e :UE 740 ]
+}

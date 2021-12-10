@@ -1,0 +1,698 @@
+[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18313 ]
+[d frameptr 6 ]
+"1 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"104
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"112
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"10 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_Write_Byte I2C_Write_Byte `(v  1 e 1 0 ]
+"27
+[v _I2C_Read_Byte I2C_Read_Byte `(uc  1 e 1 0 ]
+"53
+[v _I2C_Write_Bytes I2C_Write_Bytes `(v  1 e 1 0 ]
+"72
+[v _I2C_Read_Bytes I2C_Read_Bytes `(v  1 e 1 0 ]
+"102
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+"108
+[v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
+"113
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"118
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+"134
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+"56 D:\Andy\Desktop\IR.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"128
+[v _INT_EVENT INT_EVENT `(v  1 e 1 0 ]
+"32 D:\Andy\Desktop\IR.X\mcc_generated_files/ext_int.c
+[v _INT_ISR INT_ISR `(v  1 e 1 0 ]
+"41
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+"50
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"54
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+"59
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+"53 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
+"63
+[v _mssp1_IRQisSet mssp1_IRQisSet `T(b  1 e 0 0 ]
+"83
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
+"146
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+"151
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+"156
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+"166
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+"171
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+"186
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+"196
+[v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
+"202
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+"213
+[v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
+"218
+[v _i2c1_driver_isStart i2c1_driver_isStart `T(b  1 e 0 0 ]
+"52 D:\Andy\Desktop\IR.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 D:\Andy\Desktop\IR.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"78
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"84
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 D:\Andy\Desktop\IR.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"23 D:\Andy\Desktop\IR.X\MLX90614.c
+[v _MLX90614_Read_Bytes MLX90614_Read_Bytes `(v  1 e 1 0 ]
+"28
+[v _read2Byte read2Byte `(us  1 e 2 0 ]
+"40
+[v _readTemp readTemp `(f  1 e 4 0 ]
+"52
+[v _MLX90614_readObjectTempC MLX90614_readObjectTempC `(f  1 e 4 0 ]
+"46 D:\Andy\Desktop\IR.X\SSD1306.c
+[v _OLED_initial OLED_initial `(v  1 e 1 0 ]
+"77
+[v _OLED_setXY OLED_setXY `(v  1 e 1 0 ]
+"98
+[v _OLED_clear OLED_clear `(v  1 e 1 0 ]
+"111
+[v _OLED_write_num OLED_write_num `(v  1 e 1 0 ]
+"123
+[v _OLED_write_num_16 OLED_write_num_16 `(v  1 e 1 0 ]
+"147
+[v _OLED_display OLED_display `(v  1 e 1 0 ]
+"181
+[v _OLED_write OLED_write `(v  1 e 1 0 ]
+"77 D:\Andy\Desktop\IR.X/mcc_generated_files/i2c1_driver.h
+[v _i2c1_driver_busCollisionISR i2c1_driver_busCollisionISR `*.37(v  1 e 2 0 ]
+"78
+[v _i2c1_driver_i2cISR i2c1_driver_i2cISR `*.37(v  1 e 2 0 ]
+[s S54 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"364 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f18313.h
+[u S59 . 1 `S54 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES59  1 e 1 @11 ]
+[s S37 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"447
+[u S42 . 1 `S37 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES42  1 e 1 @16 ]
+[s S88 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 BCL1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"484
+[u S97 . 1 `S88 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES97  1 e 1 @17 ]
+"1468
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+[s S24 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"1526
+[u S29 . 1 `S24 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES29  1 e 1 @144 ]
+[s S67 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 BCL1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1563
+[u S76 . 1 `S67 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES76  1 e 1 @145 ]
+"1713
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"2023
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2427
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3338
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3388
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3642
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3896
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
+"4150
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S272 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"4172
+[u S281 . 1 `S272 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES281  1 e 1 @532 ]
+"4272
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S189 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"4305
+[s S195 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S200 . 1 `S189 1 . 1 0 `S195 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES200  1 e 1 @533 ]
+"4542
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S249 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4564
+[u S258 . 1 `S249 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES258  1 e 1 @534 ]
+"4786
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"5135
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+"5180
+[v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
+"6940
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @2193 ]
+"7342
+[v _NVMADRH NVMADRH `VEuc  1 e 1 @2194 ]
+"7706
+[v _NVMDATL NVMDATL `VEuc  1 e 1 @2195 ]
+[s S760 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 NVMREGS 1 0 :1:6 
+]
+"8467
+[s S768 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CFGS 1 0 :1:6 
+]
+[u S771 . 1 `S760 1 . 1 0 `S768 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES771  1 e 1 @2197 ]
+"8786
+[v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
+"8831
+[v _PMD1 PMD1 `VEuc  1 e 1 @2322 ]
+"8870
+[v _PMD2 PMD2 `VEuc  1 e 1 @2323 ]
+"8904
+[v _PMD3 PMD3 `VEuc  1 e 1 @2324 ]
+"8949
+[v _PMD4 PMD4 `VEuc  1 e 1 @2325 ]
+"8977
+[v _PMD5 PMD5 `VEuc  1 e 1 @2326 ]
+"9074
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
+"9214
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2331 ]
+"9311
+[v _OSCEN OSCEN `VEuc  1 e 1 @2333 ]
+"9357
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
+"9415
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"9481
+[v _INTPPS INTPPS `VEuc  1 e 1 @3600 ]
+"10001
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
+"10053
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
+"10469
+[v _RA0PPS RA0PPS `VEuc  1 e 1 @3728 ]
+"10521
+[v _RA1PPS RA1PPS `VEuc  1 e 1 @3729 ]
+"14814
+[v _PLLR PLLR `VEb  1 e 0 @18656 ]
+"30 D:\Andy\Desktop\IR.X\mcc_generated_files/ext_int.c
+[v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
+"5 D:\Andy\Desktop\IR.X\SSD1306.c
+[v _initial_command initial_command `[27]uc  1 e 27 0 ]
+"11
+[v _TEXT_6x8_char TEXT_6x8_char `[2][6]uc  1 e 12 0 ]
+"30
+[v _TEXT_11x16 TEXT_11x16 `VE[11][11]us  1 e 242 0 ]
+"56 D:\Andy\Desktop\IR.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"92
+[v main@x x `uc  1 a 1 59 ]
+[v main@y y `uc  1 a 1 58 ]
+"58
+[v main@temperature temperature `i  1 a 2 56 ]
+"126
+} 0
+"83 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_open i2c1_driver_open `(b  1 e 0 0 ]
+{
+"95
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 1 ]
+[v ___awmod@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 9 ]
+[v ___awmod@dividend dividend `i  1 p 2 11 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"50 D:\Andy\Desktop\IR.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"78
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"82
+} 0
+"84
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"98
+} 0
+"55 D:\Andy\Desktop\IR.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"104
+} 0
+"60 D:\Andy\Desktop\IR.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"59 D:\Andy\Desktop\IR.X\mcc_generated_files/ext_int.c
+[v _EXT_INT_Initialize EXT_INT_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"50
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"52
+} 0
+"123 D:\Andy\Desktop\IR.X\SSD1306.c
+[v _OLED_write_num_16 OLED_write_num_16 `(v  1 e 1 0 ]
+{
+[v OLED_write_num_16@num num `uc  1 a 1 wreg ]
+"141
+[v OLED_write_num_16@i_695 i `uc  1 a 1 8 ]
+"132
+[v OLED_write_num_16@i i `uc  1 a 1 7 ]
+"123
+[v OLED_write_num_16@num num `uc  1 a 1 wreg ]
+[v OLED_write_num_16@x x `uc  1 p 1 2 ]
+[v OLED_write_num_16@y y `uc  1 p 1 3 ]
+"125
+[v OLED_write_num_16@num num `uc  1 a 1 6 ]
+"145
+} 0
+"112 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\pic\__eeprom.c
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+{
+[v ___eetoi@addr addr `*.28VEv  1 a 1 wreg ]
+"114
+[v ___eetoi@data data `ui  1 a 2 10 ]
+"112
+[v ___eetoi@addr addr `*.28VEv  1 a 1 wreg ]
+"115
+[v ___eetoi@addr addr `*.28VEv  1 a 1 9 ]
+"117
+} 0
+"104
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+{
+[v ___eetoc@addr addr `*.28VEv  1 a 1 wreg ]
+"106
+[v ___eetoc@data data `uc  1 a 1 7 ]
+"104
+[v ___eetoc@addr addr `*.28VEv  1 a 1 wreg ]
+"107
+[v ___eetoc@addr addr `*.28VEv  1 a 1 6 ]
+"109
+} 0
+"6
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+{
+[v ___eecpymem@to to `*.1VEuc  1 a 1 wreg ]
+"8
+[v ___eecpymem@cp cp `*.1VEuc  1 a 1 3 ]
+"6
+[v ___eecpymem@to to `*.1VEuc  1 a 1 wreg ]
+[v ___eecpymem@from from `*.28VEuc  1 p 1 0 ]
+[v ___eecpymem@size size `uc  1 p 1 1 ]
+"8
+[v ___eecpymem@to to `*.1VEuc  1 a 1 4 ]
+"36
+} 0
+"111 D:\Andy\Desktop\IR.X\SSD1306.c
+[v _OLED_write_num OLED_write_num `(v  1 e 1 0 ]
+{
+[v OLED_write_num@num num `uc  1 a 1 wreg ]
+"118
+[v OLED_write_num@i i `uc  1 a 1 7 ]
+"111
+[v OLED_write_num@num num `uc  1 a 1 wreg ]
+"113
+[v OLED_write_num@num num `uc  1 a 1 6 ]
+"121
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"46 D:\Andy\Desktop\IR.X\SSD1306.c
+[v _OLED_initial OLED_initial `(v  1 e 1 0 ]
+{
+"69
+[v OLED_initial@i i `us  1 a 2 3 ]
+"75
+} 0
+"147
+[v _OLED_display OLED_display `(v  1 e 1 0 ]
+{
+[v OLED_display@x x `a  1 a 1 wreg ]
+[v OLED_display@x x `a  1 a 1 wreg ]
+"149
+[v OLED_display@x x `a  1 a 1 3 ]
+"157
+} 0
+"98
+[v _OLED_clear OLED_clear `(v  1 e 1 0 ]
+{
+"105
+[v OLED_clear@i i `us  1 a 2 6 ]
+"109
+} 0
+"77
+[v _OLED_setXY OLED_setXY `(v  1 e 1 0 ]
+{
+[v OLED_setXY@x x `uc  1 a 1 wreg ]
+[v OLED_setXY@x x `uc  1 a 1 wreg ]
+[v OLED_setXY@y y `uc  1 p 1 3 ]
+"79
+[v OLED_setXY@x x `uc  1 a 1 5 ]
+"96
+} 0
+"52 D:\Andy\Desktop\IR.X\MLX90614.c
+[v _MLX90614_readObjectTempC MLX90614_readObjectTempC `(f  1 e 4 0 ]
+{
+"55
+} 0
+"40
+[v _readTemp readTemp `(f  1 e 4 0 ]
+{
+[v readTemp@reg reg `uc  1 a 1 wreg ]
+"41
+[v readTemp@temp temp `f  1 a 4 42 ]
+"40
+[v readTemp@reg reg `uc  1 a 1 wreg ]
+"43
+[v readTemp@reg reg `uc  1 a 1 41 ]
+"48
+} 0
+"28
+[v _read2Byte read2Byte `(us  1 e 2 0 ]
+{
+[v read2Byte@a a `uc  1 a 1 wreg ]
+"30
+[v read2Byte@data data `[3]uc  1 a 3 16 ]
+"31
+[v read2Byte@ret ret `us  1 a 2 13 ]
+"28
+[v read2Byte@a a `uc  1 a 1 wreg ]
+"29
+[v read2Byte@F5157 F5157 `[3]uc  1 s 3 F5157 ]
+[v read2Byte@a a `uc  1 a 1 15 ]
+"38
+} 0
+"23
+[v _MLX90614_Read_Bytes MLX90614_Read_Bytes `(v  1 e 1 0 ]
+{
+[v MLX90614_Read_Bytes@data_addr data_addr `uc  1 a 1 wreg ]
+[v MLX90614_Read_Bytes@data_addr data_addr `uc  1 a 1 wreg ]
+[v MLX90614_Read_Bytes@data data `*.4uc  1 p 1 0 ]
+[v MLX90614_Read_Bytes@len len `us  1 p 2 1 ]
+"25
+[v MLX90614_Read_Bytes@data_addr data_addr `uc  1 a 1 5 ]
+"26
+} 0
+"72 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_Read_Bytes I2C_Read_Bytes `(v  1 e 1 0 ]
+{
+[v I2C_Read_Bytes@Slave_addr Slave_addr `uc  1 a 1 wreg ]
+"89
+[v I2C_Read_Bytes@i i `us  1 a 2 12 ]
+"72
+[v I2C_Read_Bytes@Slave_addr Slave_addr `uc  1 a 1 wreg ]
+[v I2C_Read_Bytes@Data_addr Data_addr `uc  1 p 1 5 ]
+[v I2C_Read_Bytes@data data `*.4uc  1 p 1 6 ]
+[v I2C_Read_Bytes@n n `us  1 p 2 7 ]
+"75
+[v I2C_Read_Bytes@Slave_addr Slave_addr `uc  1 a 1 11 ]
+"97
+} 0
+"113
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+{
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+[v I2C_Write@data data `uc  1 a 1 2 ]
+"116
+} 0
+"186 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_TXData i2c1_driver_TXData `T(v  1 e 1 0 ]
+{
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+[v i2c1_driver_TXData@d d `uc  1 a 1 wreg ]
+"188
+[v i2c1_driver_TXData@d d `uc  1 a 1 0 ]
+"189
+} 0
+"134 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"138
+} 0
+"156 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_stop i2c1_driver_stop `T(v  1 e 1 0 ]
+{
+"159
+} 0
+"102 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"106
+} 0
+"146 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_start i2c1_driver_start `T(v  1 e 1 0 ]
+{
+"149
+} 0
+"218
+[v _i2c1_driver_isStart i2c1_driver_isStart `T(b  1 e 0 0 ]
+{
+"221
+} 0
+"118 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+{
+[v I2C_Read@keep keep `a  1 a 1 wreg ]
+"119
+[v I2C_Read@temp temp `uc  1 a 1 4 ]
+"118
+[v I2C_Read@keep keep `a  1 a 1 wreg ]
+[v I2C_Read@keep keep `a  1 a 1 3 ]
+"132
+} 0
+"166 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _i2c1_driver_startRX i2c1_driver_startRX `T(v  1 e 1 0 ]
+{
+"169
+} 0
+"202
+[v _i2c1_driver_sendNACK i2c1_driver_sendNACK `T(v  1 e 1 0 ]
+{
+"206
+} 0
+"196
+[v _i2c1_driver_sendACK i2c1_driver_sendACK `T(v  1 e 1 0 ]
+{
+"200
+} 0
+"213
+[v _i2c1_driver_isBufferFull i2c1_driver_isBufferFull `T(b  1 e 0 0 ]
+{
+"216
+} 0
+"171
+[v _i2c1_driver_getRXData i2c1_driver_getRXData `T(uc  1 e 1 0 ]
+{
+"174
+} 0
+"108 D:\Andy\Desktop\IR.X\I2C.c
+[v _I2C_ReStart I2C_ReStart `(v  1 e 1 0 ]
+{
+"111
+} 0
+"53 D:\Andy\Desktop\IR.X\mcc_generated_files/i2c1_driver.c
+[v _mssp1_clearIRQ mssp1_clearIRQ `T(v  1 e 1 0 ]
+{
+"56
+} 0
+"63
+[v _mssp1_IRQisSet mssp1_IRQisSet `T(b  1 e 0 0 ]
+{
+"66
+} 0
+"151
+[v _i2c1_driver_restart i2c1_driver_restart `T(v  1 e 1 0 ]
+{
+"154
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 29 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 28 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 19 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 27 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
+} 0
+"52 D:\Andy\Desktop\IR.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"78
+} 0
+"32 D:\Andy\Desktop\IR.X\mcc_generated_files/ext_int.c
+[v _INT_ISR INT_ISR `(v  1 e 1 0 ]
+{
+"38
+} 0
+"41
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+{
+"48
+} 0
+"54
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"57
+} 0
+"128 D:\Andy\Desktop\IR.X\main.c
+[v _INT_EVENT INT_EVENT `(v  1 e 1 0 ]
+{
+"131
+} 0
